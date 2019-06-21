@@ -7,7 +7,7 @@
         body {
           margin:0px;
           padding:0px;
-          background-color :#0000ff;
+          background-color :#b3defe;
           }
         a {
           color :#ffffff;
@@ -32,19 +32,30 @@
         color : #ffffff;
         font-size :20px;
         }
+      .buttons{
+        /*border : 1px solid red;*/
+
+        padding-right :0px;
+        margin-left :580px;
+      }
 
       .contents{
         min-height: 500px;
         padding-top: 20px;
         padding-bottom : 20px;
         background-color: white;
-        body{text-align : center;}
-        border : 1px solid red;
+
+        /*border : 1px solid red;*/
         font-size: 18px;
         color: #333333;
+        /*<style type="text/css">
+          #co{height: 550px;background:url("img/co1.jpg" style="display:block;margin: auto;height: 550px;text-align:center;")}
+        </style>*/
       }
-    </style>
+      </style>
+
     <title> Kim Sung Soo Art Works </title>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142132888-1"></script>
 <script>
@@ -54,6 +65,8 @@
 
   gtag('config', 'UA-142132888-1');
 </script>
+
+
 
   </head>
   <body>
@@ -68,14 +81,35 @@
     </div>
 
     <div class = contents>
-      <!--  <button type="button" name="prev">prev</button>
-        <button type="button" name="next">next</button>-->
-        .slde_btn a:hover{background- color:#111100}
-        .slde_btn a.prev{left: 10px}
-        .slde_btn a.next{right:10px}
-        <img src="img/co79.jpg" style="display:block; margin: auto;" height= 550px >
+      <div id ="co"></div>
+      <img src="img/co1.jpg" style="display:block;margin: auto;height: 550px;text-align:center;">
+
+
+      <script type="text/javascript">
+        var currentCo = 1;
+        next.onclick = function(){
+          currentCo++;
+          if(currentCo ==co.length){currentCo=1;}
+          co.style.background = "url('co'+currentCo+'.jpg')";
+          co.style.backgroundSize = "cover";
+        }
+        prev.onclick = function(){
+          currentCo--;
+          if(currentCo ==1){currentCo=co.length;}
+         co.style.background = "url('co'+currentCo+'.jpg')";
+         co.style.backgroundSize = "cover";
+        }
+      </script>
+        <!--<img src="img/co79.jpg" style="display:block; margin: auto;" height= 550px >-->
 
       </div>
+        <div class=buttons>
+        <button type="button" name="prev">prev 앞으로</button>
+        <button type="button" name="next">next 다음으로</button>
+      </div>
+
+
+
       <!-- 라이브리 시티 설치 코드 -->
   <div id="lv-container" data-id="city" data-uid="MTAyMC80NDc3MS8yMTI5Mg==">
   	<script type="text/javascript">
