@@ -5,7 +5,7 @@
 
     <style>
       body {
-        margin: 0px;
+        margin: auto;
         padding: 0px;
         background-color: #b3defe;
       }
@@ -47,11 +47,10 @@
         padding-top: 20px;
         padding-bottom: 20px;
         background-color: white;
-
+        text-align: center;
         /*border : 1px solid red;*/
         font-size: 18px;
         color: #333333;
-        /*#co{height: 550px;background:url("img/co1.jpg" style="display:block;margin: auto;height: 550px;text-align:center;")}*/
       }
     </style>
 
@@ -101,14 +100,18 @@
       />
 
       <img src="img/co79.jpg" style="display:block; margin: auto;" height= 550px >-->
-     <div
+
+      <div
         id="displayImage"
         style="
-        height:550px;
         background: url('img/co1.jpg');
-        background-size: cover
+        height: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
         "
-     ></div>
+      ></div>
     </div>
 
     <div class="buttons">
@@ -125,7 +128,6 @@
           currentImage--
           displayImage.style.background =
             "url('img/co" + currentImage + ".jpg')"
-
           displayImage.style.backgroundPosition = "center"
           displayImage.style.backgroundRepeat = "no-repeat"
           displayImage.style.backgroundSize = "contain"
